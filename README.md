@@ -4,4 +4,7 @@
 * clone the folder into the $HOME path
 ```
 cd $HOME
-git clone 
+git clone https://github.com/vsanjeevagowda-s/my-ssh-tunnel.git
+```
+
+cd 
