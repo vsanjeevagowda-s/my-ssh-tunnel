@@ -8,4 +8,4 @@ HOST=$2
 USERNAME=$3
 echo ""
 echo "[ `date` ] [ RUNNING ] Checking port: ${port} and exiting..."
-ssh -S "${BASEDIR}/my-sock-${HOST}-${PORT}" -O exit $USERNAME@$HOST
+ssh -S "${BASEDIR}/my-sock-${USERNAME}-${HOST}-${PORT}" -O exit $USERNAME@$HOST

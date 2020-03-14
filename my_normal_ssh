@@ -1,0 +1,16 @@
+#!/bin/bash
+
+BASEDIR=$(dirname "$0")
+printf " \nRunning in BASEDIR : $BASEDIR\n"
+
+printf "\nPlease enter the username\n"
+read username
+
+printf "\n# Entered username: ${username}\n"
+
+printf "\nPlease enter the IP\n"
+read selectedip
+
+printf "\n# Entered ip: ${selectedip}\n"
+
+ssh $username@$selectedip

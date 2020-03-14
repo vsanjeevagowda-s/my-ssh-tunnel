@@ -1,23 +1,25 @@
 #!/bin/bash
 
 BASEDIR=$(dirname "$0")
-
 printf " \nRunning in BASEDIR : $BASEDIR\n"
 
-printf " \nPlease enter the port\n"
-read port
-
-printf "\n# Entered port: ${port}\n"
-
-printf "\nPlease enter the username\n"
-read username
-
-printf "\n# Entered username: ${username}\n"
-
-printf "\nPlease enter the IP\n"
-read selectedip
-
-
-printf "\nEntered ip: ${selectedip}\n"
-myexitport $port $selectedip $username
-myconnectport $port $selectedip $username
+printf "\nPlease enter your choice: \n"
+options=("Normal ssh" "Port forward -L" "Close port forward -L")
+select opt in "${options[@]}"
+do
+    case $opt in
+        "Normal ssh")
+            my_normal_ssh
+            break
+            ;;
+        "Port forward -L")
+            my_L_port_forward
+            break
+            ;;
+        "Close port forward -L")
+            close_my_L_port_forward
+            break
+            ;;
+        *) echo "invalid option $REPLY";;
+    esac
+done
