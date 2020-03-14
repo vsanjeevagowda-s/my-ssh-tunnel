@@ -6,4 +6,20 @@ printf " \nRunning in BASEDIR : $BASEDIR\n"
 printf " \nPlease enter the port\n"
 read port
 
+printf "\n# Entered port: ${port}\n"
+
+printf "\nPlease enter the username\n"
+read username
+
+printf "\n# Entered username: ${username}\n"
+
+printf "\nPlease enter the IP\n"
+read selectedip
+
 selected_connections=$(ls "${BASEDIR}" | grep $port)
+
+for i in "${selected_connections[@]}"
+do
+  printf "\n  Closing connection : ${i} \n"
+  my_exit_port $port $selectedip $username
+done
