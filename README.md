@@ -1,10 +1,16 @@
 # SSH Tunneling in background (Socket will be created);
 
 ## STEPS:
-* clone the folder into the $HOME path
 ```
 cd $HOME
-git clone https://github.com/vsanjeevagowda-s/my-ssh-tunnel.git
-```
 
-cd 
+git clone https://github.com/vsanjeevagowda-s/my-ssh-tunnel.git
+
+cd $HOME/my-ssh-tunnel
+
+chmod -R +x ./bin
+
+chmod +x setup.sh
+
+./setup.sh
+```
