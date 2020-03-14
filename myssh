@@ -1,0 +1,23 @@
+#!/bin/bash
+
+BASEDIR=$(dirname "$0")
+
+printf " \nRunning in BASEDIR : $BASEDIR\n"
+
+printf " \nPlease enter the port\n"
+read port
+
+printf "\n# Entered port: ${port}\n"
+
+printf "\nPlease enter the username\n"
+read username
+
+printf "\n# Entered username: ${username}\n"
+
+printf "\nPlease enter the IP\n"
+read selectedip
+
+
+printf "\nEntered ip: ${selectedip}\n"
+myexitport $port $selectedip $username
+myconnectport $port $selectedip $username

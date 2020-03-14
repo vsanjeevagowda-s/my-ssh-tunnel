@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BASEDIR=$(dirname "$0")
+echo "Running in BASEDIR : $BASEDIR"
+
+PORT=$1
+HOST=$2
+USERNAME=$3
+echo ""
+echo "[ `date` ] [ RUNNING ] Checking port: ${port} and exiting..."
+ssh -S "${BASEDIR}/my-sock-${HOST}-${PORT}" -O exit $USERNAME@$HOST

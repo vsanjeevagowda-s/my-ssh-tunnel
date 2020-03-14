@@ -1,0 +1,11 @@
+#!/bin/bash
+
+BASEDIR=$(dirname "$0")
+printf "\n Running in BASEDIR : $BASEDIR"
+
+PORT=$1
+HOST=$2
+USERNAME=$3
+echo ""
+echo "[ `date` ] [ RUNNING ] Connecting...."
+ssh -M -S "${BASEDIR}/my-sock-${HOST}-${PORT}" -fNT -L $PORT:localhost:$PORT $USERNAME@$HOST
