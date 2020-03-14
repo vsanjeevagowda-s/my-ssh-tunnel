@@ -2,8 +2,8 @@
 
 BASEDIR=$(dirname "$0")
 CURRENT_WORKING_DIR=`pwd`
-# BASHRC_FILE_PATH=$HOME/.bashrc
-BASHRC_FILE_PATH=a.txt
+BASHRC_FILE_PATH=$HOME/.bashrc
+# BASHRC_FILE_PATH=a.txt
 
 printf " \nRunning in BASEDIR : $BASEDIR\n"
 printf "\CURRENT_WORKING_DIR path: $CURRENT_WORKING_DIR\n"
