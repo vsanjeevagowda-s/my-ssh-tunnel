@@ -13,4 +13,6 @@ chmod -R +x ./bin
 chmod +x setup.sh
 
 ./setup.sh
+
+source $HOME/.bashrc
 ```
